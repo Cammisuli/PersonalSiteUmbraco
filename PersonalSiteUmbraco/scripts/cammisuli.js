@@ -7,8 +7,8 @@ $(window).scroll(function() {
     }
 });
 
-//jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
+    //jQuery for page scrolling feature
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -16,12 +16,20 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    //code to close mobile nav on click
+    $('.navbar-collapse a').click(function (e) {
+        if ($('.navbar-toggle').css('display') == 'block' && !$(this).siblings().length) {
+            $('.navbar-collapse').collapse('toggle');
+        }
+    });
+
 });
 
 //Google Map Skin
 var myOptions = {
     zoom: 15,
-    center: new google.maps.LatLng(53.385873, -1.471471),
+    center: new google.maps.LatLng(43.5893907, -79.6440754),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
     styles: [

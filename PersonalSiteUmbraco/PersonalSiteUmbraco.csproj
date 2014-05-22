@@ -398,6 +398,7 @@
     <Content Include="scripts\cammisuli.min.js.map">
       <DependentUpon>cammisuli.min.js</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\Personal.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
